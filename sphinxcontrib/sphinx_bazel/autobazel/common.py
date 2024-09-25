@@ -9,14 +9,9 @@ import re
 from docutils.parsers.rst import Directive, directives
 
 import os
-from pkg_resources import parse_version
 import sphinx
 
-sphinx_version = sphinx.__version__
-if parse_version(sphinx_version) >= parse_version("1.6"):
-    from sphinx.util import logging
-else:
-    import logging
+from sphinx.util import logging
 logger = logging.getLogger(__name__)
 
 
